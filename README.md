@@ -1073,9 +1073,26 @@ PowerUp.ps1 is a program that enables a user to perform quick checks against a W
 #powershell -ExecutionPolicy Bypass -Command "..\PowerUp.ps1;Invoke-AllChecks" 
 ----------------------------------------------------------------------------------------------------
 
+**Nikto Web Vulnerability Scanner
+**
+Command: nikto -h [target website] -Tuning x
 
- 
+-h : Target host
+x : Reverse Tuning Options (include all except specified)
 
+Command: nikto -h [target website] -Cgidirs all
+
+-Cgidirs: scans specified CGI directories
+
+Saving to Desktop
+ cd Desktop
+ nikto -h [Target Website] -o [File_Name] -F txt
+
+ -h : specifies the target
+ -o: specifies the name of the output file
+ -F : specifies the file format
+
+ pluma File_Name
  
 
  
