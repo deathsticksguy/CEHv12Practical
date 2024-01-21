@@ -145,6 +145,8 @@ Cd sdcard
 Cd Download
 Ls
 
+Download/ Pull file: adb pull sdcaard/log.txt /home/username/Desktop
+
 Module 18 - IoT and OT Hacking
 
 18.1 Capture and Analyze IoT Traffic using Wireshark
