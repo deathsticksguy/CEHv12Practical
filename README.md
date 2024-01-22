@@ -1400,5 +1400,12 @@ https://medium.com/techiepedia/certified-ethical-hacker-practical-exam-guide-dce
 https://github.com/dhabaleshwar/CEHPractical/blob/main/Everything%20You%20Need.md
 
 https://github.com/CyberSecurityUP/Guide-CEH-Practical-Master
+
+https://github.com/sampritdas8/Ec-Council-CEH-Practical--Guide-For-Exam/blob/main/CEH(Practical).md
+
+https://github.com/hunterxxx/CEH-v12-Practical
+
+https://github.com/DarkLycn1976/CEH-Practical-Notes-and-Tools
  
 https://ceh-practical.cavementech.com/
+
