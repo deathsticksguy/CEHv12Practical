@@ -1398,5 +1398,7 @@ Resources:
 https://medium.com/techiepedia/certified-ethical-hacker-practical-exam-guide-dce1f4f216c9
 
 https://github.com/dhabaleshwar/CEHPractical/blob/main/Everything%20You%20Need.md
+
+https://github.com/CyberSecurityUP/Guide-CEH-Practical-Master
  
-ceh-practical.cavementech.com
+https://ceh-practical.cavementech.com/
