@@ -26,6 +26,71 @@ nmap -O 170.16.0.1/24 -oN namp-OS.txt
 
 namp -sC -sV -sS 170.16.0.20 -oN namp-all.txt
 
+Module 3: Enumeration
+
+FTP Enumeration:
+
+nmap -sC -p 21 IP Address
+
+hydra -H
+
+hydra -l if username is known
+
+hydra -L if username is in wordlist
+
+hydra -L wordlist -P passwordlist IPAddress ftp
+
+Login to FTP : ftp IPAddress
+
+Download the file: get filename.ext
+exit
+ls
+cat filename.ext
+
+SNMP Enumeration:
+
+nmap -sU IPAddress
+snmp-check IPAddress
+Running processes:nmap -sU -p 161 --script=snmp-processes <target>
+Find valid strings using metasploit:
+msfconsole
+search snmp
+use auxiliary/scanner/snmp/snmp_login
+show options
+set RHOSTS target
+exploit
+Getinterfaces: nmap -sU -p 161 --script=snmp-interfaces TargetIP
+
+SMB Enumeration:
+nmap -p 445 --script smb-enum-shares IPaddress
+nmap -p 445 --script smb-enum-users IPaddress
+nmap -p 445 --script smb-enum-users --script-args smbusername=username, smbpassword=password IPaddress
+nmap -p 445 --script smb-enum-groups --script-args smbusername=username, smbpassword=password IPaddress
+nmap -sC -sV -A -T4 -p 445 IPAddress
+nmap -p 445 --script smb-enum-services --script-args smbusername=username, smbpassword=password IPaddress
+
+RDP Exploitation:
+
+msfconsole
+search rdp
+use auxiliary/scanner/rdp/rdp_scanner
+show options
+set RHOSTS IPAddress
+set RPORT Portnumber
+exploit
+Success would be confirmation if RDP was running on the RPORT
+
+hydra -L userlist -P passwordlist rdp://IPAddress -s RPORT
+
+using Xfreerdp
+
+xfreerdp /u:username /p:password /v:IPAddress
+find flag on the rdp computer
+
+NetBIOS Enumeration:
+
+nmap -sV --script nbstat.nse IPAddress
+
 
 4.7 Gather wordlist from Target website using CeWL
 
