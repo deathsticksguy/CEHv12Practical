@@ -18,7 +18,7 @@ Aggressive Scan	nmap -A IP/CIDR
 
 Scanning using NSE scripts	nmap --scripts <script_name> -p <port> IP/CIDR
 
-Scripts + Version + Ports + OS Scan (Overall)	nmap -sC -sV -p- -A -v -T4 IP/CIDR
+Scripts + Version + Ports + OS Scan (Overall)	nmap -sC -sV -p- -O -A -v -T4 IP/CIDR
 
 nmap -sn 170.16.0.1/24 -oN nmap.txt
 
