@@ -115,6 +115,15 @@ Revealing: SNOW.EXE -C -p "password" Hiddensecret.txt
 
 Decrpt hash, go to hashes.com, paste the hash
 
+Cryptography
+
+HashMyFiles to compare hashes and check if file was tampered
+Cryptoforge for encrypting/decypting files
+
+BCTextEncoder
+Cryptool
+Veracrypt
+
 4.7 Gather wordlist from Target website using CeWL
 
 Cewl -d 2 -m 5 www.certifiedhacker.com
