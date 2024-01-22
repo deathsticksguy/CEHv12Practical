@@ -1289,7 +1289,14 @@ paste the private key (save and exit ctrl +s and ctrl+x)
 chmod 600 id_rsa
 ssh root@TargetIP -p PORTNO -i id_rsa
 
+Finding FQDN of DC
 
+nmap -A -sV IPAddress
+For DVWAA, remove C:/wamp/ and type URL, you'll get hash file and decrypt it.
+
+For OpenVAS, user default creds: admin:password
+
+Veracrypt volume pass is stored in parrot Os > Documents folder in hash format
 ____________________________________________________________________________________________________________
 Resources: 
 
