@@ -148,7 +148,17 @@ whoami
 cd sdcard/
 cat secret.txt
 
+Hash identifier to identify the hash
 
+John the Ripper
+
+zip2john filename.zip > hash.txt
+
+john --format=zip hash.txt
+
+sudo cat /etc/shadow
+
+sudo john --format=crypt /etc/shadow
 
 4.7 Gather wordlist from Target website using CeWL
 
