@@ -105,6 +105,15 @@ Ctrl +F search strings
 Identifying DDOS:
 Statistics -> Conversations -> IPv4, sort by packets, bytes
 
+Steganography
+
+Open Snow Tool location in CMD
+
+Hiding:SNOW.EXE -C -m "Secret Message" -p "password" OriginalFile.txt Hiddensecret.txt
+
+Revealing: SNOW.EXE -C -p "password" Hiddensecret.txt
+
+Decrpt hash, go to hashes.com, paste the hash
 
 4.7 Gather wordlist from Target website using CeWL
 
