@@ -119,7 +119,7 @@ Cryptography
 
 HashMyFiles to compare hashes and check if file was tampered
 Cryptoforge for encrypting/decypting files
-
+Hashcalc
 BCTextEncoder
 Cryptool
 Veracrypt
