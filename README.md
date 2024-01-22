@@ -124,6 +124,22 @@ BCTextEncoder
 Cryptool
 Veracrypt
 
+Hacking Web
+
+Open Burpsuite -> Proxy
+Right click request area, save it 
+
+sqlmap -r request.txt --dbs
+sqlmap -r request.txt -D DBname 
+sqlmap -r request.txt -D DBname --tables
+sqlmap -r request.txt -D DBname --tables --columns
+sqlmap -r request.txt -D DBname --dump
+
+
+wpscan -h
+wpscan --url http://URL --enumerate u
+
+
 4.7 Gather wordlist from Target website using CeWL
 
 Cewl -d 2 -m 5 www.certifiedhacker.com
