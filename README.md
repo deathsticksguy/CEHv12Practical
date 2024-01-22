@@ -139,6 +139,16 @@ sqlmap -r request.txt -D DBname --dump
 wpscan -h
 wpscan --url http://URL --enumerate u
 
+ADB:
+adb devices
+adb connect IPaddress:portnumber
+adb shell
+ls
+whoami
+cd sdcard/
+cat secret.txt
+
+
 
 4.7 Gather wordlist from Target website using CeWL
 
