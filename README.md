@@ -1312,3 +1312,4 @@ https://medium.com/techiepedia/certified-ethical-hacker-practical-exam-guide-dce
 
 https://github.com/dhabaleshwar/CEHPractical/blob/main/Everything%20You%20Need.md
  
+ceh-practical.cavementech.com
