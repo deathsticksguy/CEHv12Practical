@@ -91,6 +91,20 @@ NetBIOS Enumeration:
 
 nmap -sV --script nbstat.nse IPAddress
 
+DoS and DDoS:
+
+tcp.flags.syn==1
+Right click paacket -> Follow TCP/HTTP Stream to view conversations
+
+To identify if text file is present File -> Export Object -> HTTP, sort by filename and save to desktop, view it
+
+Finding Comments
+
+Ctrl +F search strings
+
+Identifying DDOS:
+Statistics -> Conversations -> IPv4, sort by packets, bytes
+
 
 4.7 Gather wordlist from Target website using CeWL
 
