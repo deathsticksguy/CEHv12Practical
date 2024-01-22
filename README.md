@@ -1292,6 +1292,7 @@ ssh root@TargetIP -p PORTNO -i id_rsa
 Finding FQDN of DC
 
 nmap -A -sV IPAddress
+nmap -p389 -sV Subnet
 For DVWAA, remove C:/wamp/ and type URL, you'll get hash file and decrypt it.
 
 For OpenVAS, user default creds: admin:password
