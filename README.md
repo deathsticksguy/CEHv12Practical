@@ -1297,6 +1297,8 @@ For DVWAA, remove C:/wamp/ and type URL, you'll get hash file and decrypt it.
 For OpenVAS, user default creds: admin:password
 
 Veracrypt volume pass is stored in parrot Os > Documents folder in hash format
+
+Drupal website/ Privilege escalation at Linux: nmap or owasp zap vuln scan and grab exploit from searchsploit
 ____________________________________________________________________________________________________________
 Resources: 
 
