@@ -1295,6 +1295,8 @@ nmap -A -sV IPAddress
 
 nmap -p389 -sV Subnet
 
+nmap --script smb-os-discovery.nse -p445 IPAddress
+
 For DVWAA, remove C:/wamp/ and type URL, you'll get hash file and decrypt it.
 
 
