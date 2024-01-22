@@ -1,4 +1,7 @@
-![image](https://github.com/deathsticksguy/CEHv12Practical/assets/34894850/e592f418-0fe9-4f17-84ae-04fba9bf28a3)Module 2: Footprinting & Reconnaissance
+Module 2: Footprinting & Reconnaissance
+
+![image](https://github.com/deathsticksguy/CEHv12Practical/assets/34894850/e592f418-0fe9-4f17-84ae-04fba9bf28a3)
+
 
 4.7 Gather wordlist from Target website using CeWL
 
@@ -1124,20 +1127,34 @@ ssh root@TargetIP -p PORTNO -i id_rsa
  Scanning Network using Nmap
 
 Scaanning network Live Host (ping sweep)	nmap -sP IP/CIDR
+
 Scanning Live Host without port scan in same subnet (ARP Scan)	nmap -PR -sn IP/CIDR
+
 Scripts + Version running on target machine	nmap -sC -sV IP/CIDR
+
 OS of the target	nmap -O IP
+
 All open ports of the target	nmap -p- IP/CIDR
+
 Specific port scan of the target	nmap -p <port number> IP/CIDR
+
 Aggressive Scan	nmap -A IP/CIDR
+
 Scanning using NSE scripts	nmap --scripts <script_name> -p <port> IP/CIDR
+
 Scripts + Version + Ports + OS Scan (Overall)	nmap -sC -sV -p- -A -v -T4 IP/CIDR
 
+nmap -sn 170.16.0.1/24 -oN nmap.txt
 
+nmap -O 170.16.0.1/24 -oN namp-OS.txt
+
+namp -sC -sV -sS 170.16.0.20 -oN namp-all.txt
 
  
 ____________________________________________________________________________________________________________
 Resources: 
+
+https://medium.com/techiepedia/certified-ethical-hacker-practical-exam-guide-dce1f4f216c9
 
 https://github.com/dhabaleshwar/CEHPractical/blob/main/Everything%20You%20Need.md
  
