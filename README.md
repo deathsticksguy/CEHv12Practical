@@ -1392,6 +1392,23 @@ For OpenVAS, user default creds: admin:password
 Veracrypt volume pass is stored in parrot Os > Documents folder in hash format
 
 Drupal website/ Privilege escalation at Linux: nmap or owasp zap vuln scan and grab exploit from searchsploit
+
+Default Creds
+
+Nessus: Admin:Password
+
+Green Bone VAS: admin:password
+
+
+Sharing files:
+
+mkdir /var/www/html/share
+chmod -R 755 /var/www/html/share
+chown -R www-data:www-data /var/www/html/share
+cp /home/attacker/desktop/Filename.ext /var/www/html/share
+service apache2start
+
+http://ParrotmachineIP/share
 ____________________________________________________________________________________________________________
 Resources: 
 
